@@ -65,6 +65,10 @@ In total, **13,520 videos** (real and manipulated) are used for training and eva
 ## Training & Evaluation
 
 ### 📊 Performance Metrics
+### Training and Validation Accuracy and Loss 
+
+![Training and Validation Accuracy and Loss](assets/results/result.png)
+
 
 * **Accuracy:** 90%
 * **Precision:** 0.92
