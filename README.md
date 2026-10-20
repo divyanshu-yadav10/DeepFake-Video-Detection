@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project presents a **robust deepfake detection framework** that leverages **spatio-temporal modeling** and **Explainable Artificial Intelligence (XAI)** to accurately identify **face-swap deepfake videos**. The system integrates **XceptionNet** for spatial feature extraction, a **Bidirectional LSTM (Bi-LSTM)** for temporal sequence modeling, and **Grad-CAM** for visual explainability, addressing the critical need for both **accuracy and transparency** in modern deepfake detection systems.
+This project presents a **robust deepfake detection framework** that leverages **spatio-temporal modeling** and **Explainable Artificial Intelligence (XAI)** to accurately identify **face-swap deepfake videos**. The system integrates **XceptionNet** for spatial feature extraction, a **Bidirectional LSTM (Bi-LSTM)** for temporal sequence modeling.
 
 Deepfakes, generated using advanced **Generative Adversarial Networks (GANs)**, pose serious threats in the form of **misinformation, identity theft, and digital fraud**. As visual artifacts in deepfakes continue to diminish, traditional frame-based and black-box deep learning models struggle to generalize and explain their predictions. This work overcomes these challenges by explicitly modeling **temporal inconsistencies across video frames** and providing **human-interpretable explanations** for detection decisions.
 
@@ -10,14 +10,11 @@ Deepfakes, generated using advanced **Generative Adversarial Networks (GANs)**, 
 
 * **Subtle visual artifacts** in modern deepfakes that evade traditional detectors
 * **Failure of frame-based models** to capture temporal inconsistencies
-* **Lack of explainability** in deep learning–based forensic systems
-* Need for **trustworthy and transparent AI** in digital forensics
 
 ## Objectives
 
 * Develop a **hybrid spatial–temporal deepfake detection model**
 * Detect **facial manipulation anomalies** across video frames
-* Integrate **Grad-CAM–based explainability** for forensic transparency
 * Validate performance on **benchmark deepfake datasets**
 
 ## Methodology
@@ -56,12 +53,6 @@ In total, **13,520 videos** (real and manipulated) are used for training and eva
 * Includes **Dropout (0.3)** for regularization
 * Fully connected layer (**8 neurons, ReLU**) followed by a **sigmoid output** for binary classification
 
-### 🔍 Explainability — Grad-CAM
-
-* Generates **class-discriminative heatmaps** highlighting influential facial regions
-* Commonly focuses on **eyes, mouth, and facial boundaries**
-* Enhances **forensic interpretability** and trust in model predictions
-
 ## Training & Evaluation
 
 ### 📊 Performance Metrics
@@ -85,21 +76,12 @@ In total, **13,520 videos** (real and manipulated) are used for training and eva
 
 * Best performance achieved with **16 units** in the Bi-LSTM layer
 
-## Comparative Analysis
-
-The proposed method outperforms or matches prior deepfake detection approaches by combining **spatial modeling, temporal analysis, and explainability**:
-
-* Traditional handcrafted feature methods: **78–85% accuracy**
-* CNN-only approaches: **85–88% accuracy**
-* CNN + LSTM without XAI: **~90% accuracy (no explainability)**
-* **Proposed XceptionNet + Bi-LSTM + Grad-CAM:** **90% accuracy with explainability**
 
 ## Applications
 
 * **Digital forensics and media verification**
 * **Misinformation and fake news detection**
 * **Cybersecurity and identity protection**
-* **Explainable AI research in video analysis**
 
 ## Limitations & Future Work
 
@@ -109,4 +91,4 @@ The proposed method outperforms or matches prior deepfake detection approaches b
 
 ## Conclusion
 
-This project demonstrates that combining **XceptionNet-based spatial feature extraction**, **Bidirectional LSTM–based temporal modeling**, and **Grad-CAM explainability** results in an effective and transparent deepfake detection system. By addressing both **performance and interpretability**, the proposed framework is well-suited for **real-world forensic applications** and contributes toward building **trustworthy AI systems** for multimedia analysis.
+This project demonstrates that combining **XceptionNet-based spatial feature extraction**, **Bidirectional LSTM–based temporal modeling** results in an effective and reliable deepfake detection system.
